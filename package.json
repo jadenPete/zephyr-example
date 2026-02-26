@@ -1,6 +1,7 @@
 {
   "name": "zephyr-example",
   "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
     "@tsconfig/strictest": "^2.0.8",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -20,7 +21,9 @@
   "type": "module",
   "version": "0.0.0",
   "dependencies": {
+    "daisyui": "^5.5.19",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.1"
   }
 }
