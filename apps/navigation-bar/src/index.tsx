@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "./components/App.tsx";
+import { NavigationBar } from "./components/NavigationBar";
 import "./assets/index.css";
 
 createRoot(document.getElementById("app")!).render(
   <StrictMode>
-    <App />
+    <NavigationBar />
   </StrictMode>,
 );

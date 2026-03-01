@@ -1,4 +1,8 @@
-import { Pane, PaneSplit } from "./SplitPane";
+import "../assets/index.css";
+import {
+  Pane,
+  PaneSplit,
+} from "@zephyr-example/shared/components/PaneSplit.tsx";
 
 export function AddButton({
   className,
@@ -75,7 +79,7 @@ export function EditPane({
   onDeleteEntry,
 }: {
   className?: string;
-  disabled: boolean;
+  disabled?: boolean;
   title: string;
   content: string;
   onTitleChange: (newTitle: string) => void;

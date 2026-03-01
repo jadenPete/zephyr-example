@@ -1,9 +1,20 @@
-import { useMemo, useState } from "react";
-import { EditPane } from "./EditPane";
-import { NavigationBar } from "./NavigationBar";
-import { SelectionPane } from "./SelectionPane";
-import { PaneSplit } from "./SplitPane";
-import type { Notes } from "../notes";
+import { PaneSplit } from "@zephyr-example/shared/components/PaneSplit.tsx";
+import type { Notes } from "@zephyr-example/shared/notes.ts";
+import React, { useMemo, useState } from "react";
+
+const EditPane = React.lazy(async () => ({
+  default: (await import("edit_pane/components/EditPane")).EditPane,
+}));
+
+const NavigationBar = React.lazy(async () => ({
+  default: (await import("navigation_bar/components/NavigationBar"))
+    .NavigationBar,
+}));
+
+const SelectionPane = React.lazy(async () => ({
+  default: (await import("selection_pane/components/SelectionPane"))
+    .SelectionPane,
+}));
 
 export function App() {
   const [notes, setNotes] = useState<Notes>(() => [

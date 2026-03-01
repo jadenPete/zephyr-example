@@ -1,22 +1,22 @@
 {
   "name": "zephyr-example",
   "devDependencies": {
+    "@module-federation/vite": "^1.11.0",
     "@tailwindcss/vite": "^4.2.1",
     "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^25.3.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.4",
     "prettier": "^3.8.1",
     "typescript": "~5.9.3",
-    "vite": "^7.3.1",
+    "vite": "^7.1.7",
     "vite-plugin-zephyr": "^0.1.13"
   },
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "format": "prettier . --write",
-    "preview": "vite preview"
+    "dev": "pnpm --filter './apps/*' --parallel dev",
+    "format": "prettier . --write"
   },
   "type": "module",
   "version": "0.0.0",

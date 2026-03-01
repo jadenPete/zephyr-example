@@ -1,3 +1,5 @@
+import "../assets/index.css";
+
 export function NavigationBar() {
   return (
     <div className="navbar">

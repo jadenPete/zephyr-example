@@ -1,2 +1,4 @@
-/dist/
-/node_modules/
+.__mf__temp/
+@mf-types/
+dist/
+node_modules/

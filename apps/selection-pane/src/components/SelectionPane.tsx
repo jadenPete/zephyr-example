@@ -1,5 +1,6 @@
-import type { Notes } from "../notes";
-import { Pane } from "./SplitPane";
+import "../assets/index.css";
+import type { Notes } from "@zephyr-example/shared/notes.ts";
+import { Pane } from "@zephyr-example/shared/components/PaneSplit.tsx";
 
 export function SelectionPane({
   className,
