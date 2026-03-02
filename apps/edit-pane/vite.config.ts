@@ -1,8 +1,8 @@
-import { federation } from "@module-federation/vite";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
+import { withZephyr } from "vite-plugin-zephyr";
 import { dependencies } from "./package.json";
 
 export default defineConfig({
@@ -10,21 +10,23 @@ export default defineConfig({
     target: "chrome89",
   },
   plugins: [
-    federation({
-      name: "edit_pane",
-      exposes: {
-        "./components/EditPane": "./src/components/EditPane.tsx",
-      },
-      filename: "remoteEntry.js",
-      remotes: {},
-      shared: {
-        react: {
-          requiredVersion: dependencies.react,
-          singleton: true,
+    withZephyr({
+      mfConfig: {
+        name: "edit_pane",
+        exposes: {
+          "./components/EditPane": "./src/components/EditPane.tsx",
         },
-        "react-dom": {
-          requiredVersion: dependencies["react-dom"],
-          singleton: true,
+        filename: "remoteEntry.js",
+        remotes: {},
+        shared: {
+          react: {
+            requiredVersion: dependencies.react,
+            singleton: true,
+          },
+          "react-dom": {
+            requiredVersion: dependencies["react-dom"],
+            singleton: true,
+          },
         },
       },
     }),

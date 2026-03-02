@@ -1,7 +1,7 @@
-import { federation } from "@module-federation/vite";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import { withZephyr } from "vite-plugin-zephyr";
 import { dependencies } from "./package.json";
 
 export default defineConfig({
@@ -9,21 +9,23 @@ export default defineConfig({
     target: "chrome89",
   },
   plugins: [
-    federation({
-      name: "navigation_bar",
-      exposes: {
-        "./components/NavigationBar": "./src/components/NavigationBar.tsx",
-      },
-      filename: "remoteEntry.js",
-      remotes: {},
-      shared: {
-        react: {
-          requiredVersion: dependencies.react,
-          singleton: true,
+    withZephyr({
+      mfConfig: {
+        name: "navigation_bar",
+        exposes: {
+          "./components/NavigationBar": "./src/components/NavigationBar.tsx",
         },
-        "react-dom": {
-          requiredVersion: dependencies["react-dom"],
-          singleton: true,
+        filename: "remoteEntry.js",
+        remotes: {},
+        shared: {
+          react: {
+            requiredVersion: dependencies.react,
+            singleton: true,
+          },
+          "react-dom": {
+            requiredVersion: dependencies["react-dom"],
+            singleton: true,
+          },
         },
       },
     }),

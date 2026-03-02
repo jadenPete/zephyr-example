@@ -85,6 +85,9 @@ importers:
       vite:
         specifier: ^7.1.7
         version: 7.1.7(@types/node@25.3.3)(jiti@2.6.1)(lightningcss@1.31.1)
+      vite-plugin-zephyr:
+        specifier: ^0.1.13
+        version: 0.1.13(https-proxy-agent@7.0.6)(rollup@4.59.0)(typescript@5.9.3)(vite@7.1.7(@types/node@25.3.3)(jiti@2.6.1)(lightningcss@1.31.1))
 
   apps/navigation-bar:
     dependencies:
