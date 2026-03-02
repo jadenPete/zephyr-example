@@ -22,8 +22,8 @@
   "type": "module",
   "version": "0.0.0",
   "zephyr:dependencies": {
-    "edit_pane": "-zephyr-example-edit-pane.zephyr-example.jadenpete@*",
-    "navigation_bar": "-zephyr-example-navigation-bar.zephyr-example.jadenpete@*",
-    "selection_pane": "-zephyr-example-selection-pane.zephyr-example.jadenpete@*"
+    "edit_pane": "-zephyr-example-edit-pane@workspace:*",
+    "navigation_bar": "-zephyr-example-navigation-bar@workspace:*",
+    "selection_pane": "-zephyr-example-selection-pane@workspace:*"
   }
 }
