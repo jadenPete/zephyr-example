@@ -3,13 +3,9 @@
   "compilerOptions": {
     "paths": {
       "@zephyr-example/shared/*": ["../../packages/shared/src/*"],
-      "edit_pane/*": ["../edit-pane/dist/types/apps/edit-pane/src/*"],
-      "navigation_bar/*": [
-        "../navigation-bar/dist/types/apps/navigation-bar/src/*"
-      ],
-      "selection_pane/*": [
-        "../selection-pane/dist/types/apps/selection-pane/src/*"
-      ]
+      "edit_pane/*": ["../edit-pane/src/*"],
+      "navigation_bar/*": ["../navigation-bar/src/*"],
+      "selection_pane/*": ["../selection-pane/src/*"]
     }
   }
 }

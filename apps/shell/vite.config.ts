@@ -6,6 +6,7 @@ import { withZephyr } from "vite-plugin-zephyr";
 import { dependencies } from "./package.json";
 
 export default defineConfig({
+  base: "./",
   build: {
     target: "chrome89",
   },

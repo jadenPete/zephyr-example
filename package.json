@@ -15,6 +15,7 @@
   },
   "private": true,
   "scripts": {
+    "build": "pnpm --filter @zephyr-example/shared build && pnpm --filter @zephyr-example/edit-pane --filter @zephyr-example/navigation-bar --filter @zephyr-example/selection-pane build && pnpm --filter @zephyr-example/shell build",
     "dev": "pnpm --filter './apps/*' --parallel dev",
     "format": "prettier . --write"
   },
